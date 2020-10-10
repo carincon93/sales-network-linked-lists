@@ -18,7 +18,6 @@ public class Seller {
         calculateBalance(firstAssociatedSellerBalance, secondAssociatedSellerBalance);
 
         calculateSmallestBalance(firstAssociatedSellerBalance, secondAssociatedSellerBalance);
-
     }
 
     void calculateBalance(double firstAssociatedSellerBalance, double secondAssociatedSellerBalance) {
