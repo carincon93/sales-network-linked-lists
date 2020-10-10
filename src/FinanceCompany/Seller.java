@@ -3,6 +3,7 @@ package FinanceCompany;
 public class Seller {
     String name;
     double membershipInititalFee = 1000 - (1000 * 0.10);
+    double percentDiscount = 0.25;
     double smallestBallance = 0;
     double largestBallance = 0;
     SellerList sellerList;
@@ -23,9 +24,9 @@ public class Seller {
     void calculateBalance(double firstAssociatedSellerBalance, double secondAssociatedSellerBalance) {
         double total = 0;
         if(firstAssociatedSellerBalance > 0 && secondAssociatedSellerBalance > 0) {
-            total = (0.25 * firstAssociatedSellerBalance) + (0.25 * secondAssociatedSellerBalance);
+            total = (percentDiscount * firstAssociatedSellerBalance) + (percentDiscount * secondAssociatedSellerBalance);
         } else {
-            total = firstAssociatedSellerBalance * 0.25;
+            total = firstAssociatedSellerBalance * percentDiscount;
         }
 
         this.membershipInititalFee += total;
